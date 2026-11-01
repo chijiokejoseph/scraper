@@ -1,0 +1,11 @@
+[package]
+name = "rust-scraper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = "0.12.12"
+scraper = "0.23.1"
+tokio = { version = "1.43.0", features = ["full"] }
+html5ever = "0.29.1"
+soup-kuchiki = "0.5.0"
