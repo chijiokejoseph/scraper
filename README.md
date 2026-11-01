@@ -52,8 +52,7 @@ scraper/
 - `ScrapeOpts{SaveWeb bool, Sort Order}`
 - Fluent Builders: `NewScrapeOpts()`, `WithSort(Order)`, `WithSaveWeb(bool)`
 - Sort Constants: `Ascending`, `Descending`
-
-&nbsp;
+  &nbsp;
 
 - **Defaults:** `SaveWeb = false`, `Sort = Ascending`. Prints the first 10 results upon completion.
 
