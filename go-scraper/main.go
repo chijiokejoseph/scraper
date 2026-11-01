@@ -47,7 +47,7 @@ func main() {
 	banner := strings.Repeat("=", spaces)
 
 	// display url
-	fmt.Printf("URL = %s\n", URL)
+	fmt.Printf("ℹ️ URL = %s\n", URL)
 	fmt.Println()
 
 	// set up controls for display
@@ -68,7 +68,7 @@ func main() {
 
 			// show that url parsing is complete
 			progress := strings.Repeat("=", num)
-			fmt.Printf("\rParsing URL ... [%-*s] | %.2f%%", num, progress, 100.0)
+			fmt.Printf("\r✅ Scraping URL ... [%-*s] | %.2f%%", num, progress, 100.0)
 
 			// display first 10 movies in the rating
 			fmt.Println()
@@ -81,7 +81,7 @@ func main() {
 
 			// display elapsed time
 			fmt.Println()
-			fmt.Printf("Elapsed Time: %d ms\n", elapsed.Milliseconds())
+			fmt.Printf("ℹ️ Elapsed Time: %d ms\n", elapsed.Milliseconds())
 			fmt.Println()
 			return
 		// intermittent displays after interval while the url result is not ready
@@ -93,7 +93,7 @@ func main() {
 			easeTime = wait * ((2 * i) - 1) / (num * num)
 			progress := strings.Repeat("=", i)
 			percent := float64(i) * 100.0 / float64(num)
-			fmt.Printf("\rParsing URL ... [%-*s] | %.2f%%", num, progress, percent)
+			fmt.Printf("\rℹ️ Scraping URL ... [%-*s] | %.2f%%", num, progress, percent)
 		// url not ready and program has timed out
 		case <-time.After(time.Duration(wait) * time.Millisecond):
 			fmt.Println()
